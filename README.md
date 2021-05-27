@@ -1,6 +1,6 @@
 # JsTeal
 ### TypeScript and JavaScript bindings for Algorand's TEAL contract language based on PyTeal.
-
+[![CI](https://github.com/DavidSeptimus/jsteal/actions/workflows/main.yml/badge.svg)](https://github.com/DavidSeptimus/jsteal/actions/workflows/main.yml)
 
 > :warning: **This library is a work in progress and is not ready for use!**
 
