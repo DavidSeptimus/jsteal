@@ -1,0 +1,49 @@
+{
+  "name": "JsTeal",
+  "version": "1.0.0",
+  "description": "TypeScript and JavaScript bindings for Algorand's TEAL contract language based on PyTeal.",
+  "main": "dist/umd/lib/index.js",
+  "module": "dist/esm/lib/index.js",
+  "types": "dist/types",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "dev": "rollup -c -w",
+    "docs": "typedoc --out docs file src",
+    "test": "tsc && jasmine-ts",
+    "lint": "eslint . --ext .ts  --ignore-path .gitignore --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\" \"spec/**/*.ts\" \"spec/**/*.js\"",
+    "prepublishOnly": "npm test && npm run lint && npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "David Septimus",
+  "license": "MIT",
+  "keywords": [],
+  "devDependencies": {
+    "@types/jasmine": "3.7.1",
+    "@types/superagent": "^4.1.11",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "^7.25.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "jasmine-ts": "^0.3.3",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.20.36",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "algosdk": "^1.9.1",
+    "buffer": "^6.0.3",
+    "hi-base32": "^0.5.1",
+    "tslib": "^2.2.0"
+  }
+}

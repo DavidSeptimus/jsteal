@@ -1,0 +1,531 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ast/UnaryExpr | jsteal</title>
+	<meta name="description" content="Documentation for jsteal">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">jsteal</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">jsteal</a>
+				</li>
+				<li>
+					<a href="ast_unaryexpr.html">ast/UnaryExpr</a>
+				</li>
+			</ul>
+			<h1>Module ast/UnaryExpr</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-kind-icon">Unary<wbr>Expr</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#balance" class="tsd-kind-icon">Balance</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#bitwisenot" class="tsd-kind-icon">Bitwise<wbr>Not</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#btoi" class="tsd-kind-icon">Btoi</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#itob" class="tsd-kind-icon">Itob</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#keccak256" class="tsd-kind-icon">Keccak256</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#len" class="tsd-kind-icon">Len</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#minbalance" class="tsd-kind-icon">Min<wbr>Balance</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#not" class="tsd-kind-icon">Not</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#pop" class="tsd-kind-icon">Pop</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#return" class="tsd-kind-icon">Return</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#sha256" class="tsd-kind-icon">Sha256</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="ast_unaryexpr.html#sha512_256" class="tsd-kind-icon">Sha512_<wbr>256</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="balance" class="tsd-anchor"></a>
+					<h3>Balance</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Balance<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:118</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the balance of a user in microAlgos.</p>
+								</div>
+								<p>Argument must be an index into Txn.Accounts that corresponds to the account to read from. It
+								must evaluate to uint64.</p>
+								<p>This operation is only permitted in application mode.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>account: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="bitwisenot" class="tsd-anchor"></a>
+					<h3>Bitwise<wbr>Not</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Bitwise<wbr>Not<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:92</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the bitwise inverse of a uint64.</p>
+								</div>
+								<p>Produces ~arg.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="btoi" class="tsd-anchor"></a>
+					<h3>Btoi</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Btoi<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:39</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convert a byte string to a uint64.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="itob" class="tsd-anchor"></a>
+					<h3>Itob</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Itob<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:46</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convert a uint64 string to a byte string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="keccak256" class="tsd-anchor"></a>
+					<h3>Keccak256</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Keccak256<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:74</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the KECCAK-256 hash of a byte string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="len" class="tsd-anchor"></a>
+					<h3>Len</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Len<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:53</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the length of a byte string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="minbalance" class="tsd-anchor"></a>
+					<h3>Min<wbr>Balance</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Min<wbr>Balance<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:132</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the minimum balance of a user in microAlgos.</p>
+								</div>
+								<p>For more information about minimum balances, see: <a href="https://developer.algorand.org/docs/features/accounts/#minimum-balance">https://developer.algorand.org/docs/features/accounts/#minimum-balance</a></p>
+								<p>Argument must be an index into Txn.Accounts that corresponds to the account to read from. It
+								must evaluate to uint64.</p>
+								<p>Requires TEAL version 3 or higher. This operation is only permitted in application mode.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>account: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="not" class="tsd-anchor"></a>
+					<h3>Not</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Not<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:83</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the logical inverse of a uint64.</p>
+								</div>
+								<p>If the argument is 0, then this will produce 1. Otherwise this will produce 0.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="pop" class="tsd-anchor"></a>
+					<h3>Pop</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Pop<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:99</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Pop a value from the stack.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="return" class="tsd-anchor"></a>
+					<h3>Return</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Return<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:106</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Immediately exit the program with the given success value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="sha256" class="tsd-anchor"></a>
+					<h3>Sha256</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Sha256<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:60</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the SHA-256 hash of a byte string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="sha512_256" class="tsd-anchor"></a>
+					<h3>Sha512_<wbr>256</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Sha512_<wbr>256<span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/ast/UnaryExpr.ts:67</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the SHA-512/256 hash of a byte string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg: <a href="../classes/ast_expr.expr.html" class="tsd-signature-type" data-tsd-kind="Class">Expr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-signature-type" data-tsd-kind="Class">UnaryExpr</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="ast_unaryexpr.html">ast/<wbr>Unary<wbr>Expr</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/ast_unaryexpr.unaryexpr.html" class="tsd-kind-icon">Unary<wbr>Expr</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#balance" class="tsd-kind-icon">Balance</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#bitwisenot" class="tsd-kind-icon">Bitwise<wbr>Not</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#btoi" class="tsd-kind-icon">Btoi</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#itob" class="tsd-kind-icon">Itob</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#keccak256" class="tsd-kind-icon">Keccak256</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#len" class="tsd-kind-icon">Len</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#minbalance" class="tsd-kind-icon">Min<wbr>Balance</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#not" class="tsd-kind-icon">Not</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#pop" class="tsd-kind-icon">Pop</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#return" class="tsd-kind-icon">Return</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#sha256" class="tsd-kind-icon">Sha256</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="ast_unaryexpr.html#sha512_256" class="tsd-kind-icon">Sha512_<wbr>256</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

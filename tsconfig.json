@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": "dist/esm/lib",
+    "declarationDir": "dist/types",
+    "declaration": true,
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "strict": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "rootDir": "src",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/local-types"
+    ]
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
