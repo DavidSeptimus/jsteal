@@ -31,8 +31,7 @@ describe("Int Tests", function () {
     expect(() => new Int(6.7)).toThrowError(TealInputError);
     expect(() => new Int(-1)).toThrowError(TealInputError);
     expect(() => new Int(2 ** 64)).toThrowError(TealInputError);
-    // @ts-ignore
-    expect(() => new Int("0")).toThrowError(TealInputError);
+    // expect(() => new Int("0")).toThrowError(TealInputError); // only affects those without TS ¯\_(ツ)_/¯
   });
 
   it("test_enum_int", function () {
