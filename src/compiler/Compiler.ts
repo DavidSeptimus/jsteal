@@ -113,8 +113,9 @@ export function compileTeal(
     const msg = `Encountered ${errors.length} error${
       errors.length > 1 ? "s " : ""
     } during compilation`;
-    throw new TealInternalError(msg.concat(errors[0].stack as string));
-    // ToDo: look into handling the stack trace
+    throw new TealInternalError(
+      "".concat(msg, "\n", errors.map((e) => e.message).join("\n"))
+    );
   }
 
   const order = sortBlocks(start);

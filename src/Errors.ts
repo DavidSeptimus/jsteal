@@ -30,19 +30,8 @@ export class TealInputError extends Error {
 }
 
 export class TealCompileError extends Error {
-  private sourceExpr: Expr | undefined;
-
-  public constructor(message: string, sourceExpr?: Expr) {
-    super(message);
-    this.sourceExpr = sourceExpr;
-  }
-
-  public toString(): string {
-    if (this.sourceExpr == null) {
-      return super.toString();
-    } else {
-      return this.message; // ToDo: implement source trace
-    }
+  public constructor(message: string, stack?: string) {
+    super(stack ? message + ":\n" + stack : message);
   }
 }
 

@@ -27,6 +27,23 @@ import {
  * Abstract base class for PyTeal expressions.
  */
 export abstract class Expr {
+  public stack = "";
+
+  /**
+   * Captures a stack trace to provide users with more useful output regarding compile-time errors
+   * @protected
+   */
+  protected constructor() {
+    // Non-standard V8-only feature (i.e. works in Node and Chromium-based browsers)
+    //https://nodejs.org/api/errors.html#errors_error_capturestacktrace_targetobject_constructoropt
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this);
+      const stackArr = this.stack.split("\n");
+      stackArr.splice(0, 2);
+      this.stack = stackArr.join("\n"); // removes new Expr() from the stack trace
+    }
+  }
+
   public abstract typeOf(): TealType;
 
   public abstract teal(options: CompileOptions): CompiledExpr;

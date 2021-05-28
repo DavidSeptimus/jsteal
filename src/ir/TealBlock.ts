@@ -128,7 +128,7 @@ export abstract class TealBlock {
           if (!currentSlotsInUse.has(slot)) {
             const e = new TealCompileError(
               "Scratch slot load occurs before store",
-              tealOp.expr
+              tealOp.expr?.stack
             );
             errors.push(e);
           }
