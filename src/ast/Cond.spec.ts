@@ -31,9 +31,8 @@ describe("Cond Tests", function () {
     pred1.nextBlock = new TealSimpleBlock([]);
     const expected = cond1;
 
-    const { argStart: actual }: { argStart: TealSimpleBlock } = expr.teal(
-      options
-    );
+    const { argStart: actual }: { argStart: TealSimpleBlock } =
+      expr.teal(options);
 
     TealComponent.withIgnoreExprEquality(() => {
       expect(actual).toEqual(expected);
@@ -75,9 +74,8 @@ describe("Cond Tests", function () {
 
     const expected = cond1;
 
-    const { argStart: actual }: { argStart: TealSimpleBlock } = expr.teal(
-      options
-    );
+    const { argStart: actual }: { argStart: TealSimpleBlock } =
+      expr.teal(options);
 
     TealComponent.withIgnoreExprEquality(() => {
       expect(actual).toEqual(expected);
@@ -132,9 +130,8 @@ describe("Cond Tests", function () {
 
     const expected = cond1;
 
-    const { argStart: actual }: { argStart: TealSimpleBlock } = expr.teal(
-      options
-    );
+    const { argStart: actual }: { argStart: TealSimpleBlock } =
+      expr.teal(options);
 
     TealComponent.withIgnoreExprEquality(() => {
       expect(actual).toEqual(expected);

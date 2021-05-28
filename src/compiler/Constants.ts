@@ -189,28 +189,28 @@ export function createConstantBlocks(
 
         const index = sortedInts.indexOf(intValue);
         switch (index) {
-          case 0: {
-            assembled.push(new TealOp(op.expr, Ops.intc_0, ["//", ...op.args]));
-            break;
-          }
-          case 1: {
-            assembled.push(new TealOp(op.expr, Ops.intc_1, ["//", ...op.args]));
-            break;
-          }
-          case 2: {
-            assembled.push(new TealOp(op.expr, Ops.intc_2, ["//", ...op.args]));
-            break;
-          }
-          case 3: {
-            assembled.push(new TealOp(op.expr, Ops.intc_3, ["//", ...op.args]));
-            break;
-          }
-          default: {
-            assembled.push(
-              new TealOp(op.expr, Ops.intc, [index, "//", ...op.args])
-            );
-            break;
-          }
+        case 0: {
+          assembled.push(new TealOp(op.expr, Ops.intc_0, ["//", ...op.args]));
+          break;
+        }
+        case 1: {
+          assembled.push(new TealOp(op.expr, Ops.intc_1, ["//", ...op.args]));
+          break;
+        }
+        case 2: {
+          assembled.push(new TealOp(op.expr, Ops.intc_2, ["//", ...op.args]));
+          break;
+        }
+        case 3: {
+          assembled.push(new TealOp(op.expr, Ops.intc_3, ["//", ...op.args]));
+          break;
+        }
+        default: {
+          assembled.push(
+            new TealOp(op.expr, Ops.intc, [index, "//", ...op.args])
+          );
+          break;
+        }
         }
         continue;
       }
@@ -230,36 +230,36 @@ export function createConstantBlocks(
           .map(tryEncodeHexString)
           .indexOf(tryEncodeHexString(byteValue));
         switch (index) {
-          case 0: {
-            assembled.push(
-              new TealOp(op.expr, Ops.bytec_0, ["//", ...op.args])
-            );
-            break;
-          }
-          case 1: {
-            assembled.push(
-              new TealOp(op.expr, Ops.bytec_1, ["//", ...op.args])
-            );
-            break;
-          }
-          case 2: {
-            assembled.push(
-              new TealOp(op.expr, Ops.bytec_2, ["//", ...op.args])
-            );
-            break;
-          }
-          case 3: {
-            assembled.push(
-              new TealOp(op.expr, Ops.bytec_3, ["//", ...op.args])
-            );
-            break;
-          }
-          default: {
-            assembled.push(
-              new TealOp(op.expr, Ops.bytec, [index, "//", ...op.args])
-            );
-            break;
-          }
+        case 0: {
+          assembled.push(
+            new TealOp(op.expr, Ops.bytec_0, ["//", ...op.args])
+          );
+          break;
+        }
+        case 1: {
+          assembled.push(
+            new TealOp(op.expr, Ops.bytec_1, ["//", ...op.args])
+          );
+          break;
+        }
+        case 2: {
+          assembled.push(
+            new TealOp(op.expr, Ops.bytec_2, ["//", ...op.args])
+          );
+          break;
+        }
+        case 3: {
+          assembled.push(
+            new TealOp(op.expr, Ops.bytec_3, ["//", ...op.args])
+          );
+          break;
+        }
+        default: {
+          assembled.push(
+            new TealOp(op.expr, Ops.bytec, [index, "//", ...op.args])
+          );
+          break;
+        }
         }
         continue;
       }

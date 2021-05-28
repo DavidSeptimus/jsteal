@@ -21,9 +21,8 @@ describe("Assert Tests", function () {
     const expr = new Assert(arg);
     expect(expr.typeOf()).toBe(TealType.none);
 
-    const { argStart: expected }: { argStart: TealSimpleBlock } = arg.teal(
-      teal2Options
-    );
+    const { argStart: expected }: { argStart: TealSimpleBlock } =
+      arg.teal(teal2Options);
     const expectedBranch = new TealConditionalBlock([]);
     expectedBranch.trueBlock = new TealSimpleBlock([]);
     expectedBranch.falseBlock = new Err().teal(teal2Options).argStart;

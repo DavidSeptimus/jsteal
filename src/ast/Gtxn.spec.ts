@@ -45,7 +45,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "Sender"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -77,7 +77,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "Fee"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -109,7 +109,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "FirstValid"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -141,7 +141,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "LastValid"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -173,7 +173,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "Note"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -205,7 +205,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "Lease"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -237,7 +237,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "Receiver"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -269,7 +269,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "Amount"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -301,7 +301,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "CloseRemainderTo"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -333,7 +333,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "VotePK"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -365,7 +365,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "SelectionPK"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -397,7 +397,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "VoteFirst"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -429,7 +429,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "VoteLast"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -461,7 +461,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "VoteKeyDilution"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -493,7 +493,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "Type"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -525,7 +525,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "TypeEnum"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -557,7 +557,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "XferAsset"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -589,7 +589,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "AssetAmount"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -621,7 +621,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "AssetSender"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -653,7 +653,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "AssetReceiver"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -685,7 +685,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "AssetCloseTo"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -717,7 +717,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "GroupIndex"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -749,7 +749,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "TxID"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -781,7 +781,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ApplicationID"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -813,7 +813,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "OnCompletion"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -846,7 +846,7 @@ describe("Gtxn Tests", function () {
           new TealOp(expr, Ops.gtxna, [i, "ApplicationArgs", j]),
         ]);
 
-        let { argStart: actual } = expr.teal(teal2Options);
+        const { argStart: actual } = expr.teal(teal2Options);
 
         expect(actual).toEqual(expected);
       }
@@ -881,7 +881,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "NumAppArgs"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -914,7 +914,7 @@ describe("Gtxn Tests", function () {
           new TealOp(expr, Ops.gtxna, [i, "Accounts", j]),
         ]);
 
-        let { argStart: actual } = expr.teal(teal2Options);
+        const { argStart: actual } = expr.teal(teal2Options);
 
         expect(actual).toEqual(expected);
       }
@@ -949,7 +949,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "NumAccounts"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -981,7 +981,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ApprovalProgram"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1013,7 +1013,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ClearStateProgram"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1045,7 +1045,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "RekeyTo"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1077,7 +1077,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAsset"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1109,7 +1109,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetTotal"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1141,7 +1141,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetDecimals"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1173,7 +1173,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetDefaultFrozen"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1205,7 +1205,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetUnitName"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1237,7 +1237,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetName"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1269,7 +1269,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetURL"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1301,7 +1301,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetMetadataHash"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1333,7 +1333,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetManager"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1365,7 +1365,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetReserve"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1397,7 +1397,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetFreeze"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1429,7 +1429,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "ConfigAssetClawback"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1461,7 +1461,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "FreezeAsset"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1493,7 +1493,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "FreezeAssetAccount"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1525,7 +1525,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "FreezeAssetFrozen"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal2Options);
+      const { argStart: actual } = expr.teal(teal2Options);
 
       expect(actual).toEqual(expected);
     }
@@ -1558,7 +1558,7 @@ describe("Gtxn Tests", function () {
           new TealOp(expr, Ops.gtxna, [i, "Assets", j]),
         ]);
 
-        let { argStart: actual } = expr.teal(teal3Options);
+        const { argStart: actual } = expr.teal(teal3Options);
 
         expect(actual).toEqual(expected);
 
@@ -1597,7 +1597,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "NumAssets"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal3Options);
+      const { argStart: actual } = expr.teal(teal3Options);
 
       expect(actual).toEqual(expected);
 
@@ -1634,7 +1634,7 @@ describe("Gtxn Tests", function () {
           new TealOp(expr, Ops.gtxna, [i, "Applications", j]),
         ]);
 
-        let { argStart: actual } = expr.teal(teal3Options);
+        const { argStart: actual } = expr.teal(teal3Options);
 
         expect(actual).toEqual(expected);
 
@@ -1673,7 +1673,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "NumApplications"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal3Options);
+      const { argStart: actual } = expr.teal(teal3Options);
 
       expect(actual).toEqual(expected);
 
@@ -1709,7 +1709,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "GlobalNumUint"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal3Options);
+      const { argStart: actual } = expr.teal(teal3Options);
 
       expect(actual).toEqual(expected);
 
@@ -1745,7 +1745,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "GlobalNumByteSlice"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal3Options);
+      const { argStart: actual } = expr.teal(teal3Options);
 
       expect(actual).toEqual(expected);
 
@@ -1781,7 +1781,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "LocalNumUint"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal3Options);
+      const { argStart: actual } = expr.teal(teal3Options);
 
       expect(actual).toEqual(expected);
 
@@ -1817,7 +1817,7 @@ describe("Gtxn Tests", function () {
         new TealOp(expr, Ops.gtxn, [i, "LocalNumByteSlice"]),
       ]);
 
-      let { argStart: actual } = expr.teal(teal3Options);
+      const { argStart: actual } = expr.teal(teal3Options);
 
       expect(actual).toEqual(expected);
 

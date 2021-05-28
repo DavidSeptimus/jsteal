@@ -60,7 +60,8 @@ export function validAddress(address: string): void {
  */
 export function validBase32(s: string): void {
   // ToDo: validate expression
-  const pattern = /^(?:[A-Z2-7]{8})*(?:([A-Z2-7]{2}([=]{6})?)|([A-Z2-7]{4}([=]{4})?)|([A-Z2-7]{5}([=]{3})?)|([A-Z2-7]{7}([=]{1})?))?$/;
+  const pattern =
+    /^(?:[A-Z2-7]{8})*(?:([A-Z2-7]{2}([=]{6})?)|([A-Z2-7]{4}([=]{4})?)|([A-Z2-7]{5}([=]{3})?)|([A-Z2-7]{7}([=]{1})?))?$/;
   if (!pattern.test(s)) {
     throw new TealInputError(`${s} is not a valid RFC 4648 base 32 string`);
   }
@@ -71,7 +72,8 @@ export function validBase32(s: string): void {
  * @param s
  */
 export function validBase64(s: string): void {
-  const pattern = /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/;
+  const pattern =
+    /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/;
   if (!pattern.test(s)) {
     throw new TealInputError(`${s} is not a valid RFC 4648 base 64 string`);
   }

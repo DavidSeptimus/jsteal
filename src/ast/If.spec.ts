@@ -17,15 +17,12 @@ describe("If Tests", function () {
     const expr = new If(args[0], args[1], args[2]);
     expect(expr.typeOf()).toBe(TealType.uint64);
 
-    const { argStart: expected }: { argStart: TealSimpleBlock } = args[0].teal(
-      options
-    );
-    const { argStart: thenBlock }: { argStart: TealSimpleBlock } = args[1].teal(
-      options
-    );
-    const { argStart: elseBlock }: { argStart: TealSimpleBlock } = args[2].teal(
-      options
-    );
+    const { argStart: expected }: { argStart: TealSimpleBlock } =
+      args[0].teal(options);
+    const { argStart: thenBlock }: { argStart: TealSimpleBlock } =
+      args[1].teal(options);
+    const { argStart: elseBlock }: { argStart: TealSimpleBlock } =
+      args[2].teal(options);
     const expectedBranch = new TealConditionalBlock([]);
     expectedBranch.trueBlock = thenBlock;
     expectedBranch.falseBlock = elseBlock;
@@ -44,15 +41,12 @@ describe("If Tests", function () {
     const expr = new If(args[0], args[1], args[2]);
     expect(expr.typeOf()).toBe(TealType.bytes);
 
-    const { argStart: expected }: { argStart: TealSimpleBlock } = args[0].teal(
-      options
-    );
-    const { argStart: thenBlock }: { argStart: TealSimpleBlock } = args[1].teal(
-      options
-    );
-    const { argStart: elseBlock }: { argStart: TealSimpleBlock } = args[2].teal(
-      options
-    );
+    const { argStart: expected }: { argStart: TealSimpleBlock } =
+      args[0].teal(options);
+    const { argStart: thenBlock }: { argStart: TealSimpleBlock } =
+      args[1].teal(options);
+    const { argStart: elseBlock }: { argStart: TealSimpleBlock } =
+      args[2].teal(options);
     const expectedBranch = new TealConditionalBlock([]);
     expectedBranch.trueBlock = thenBlock;
     expectedBranch.falseBlock = elseBlock;
@@ -71,15 +65,12 @@ describe("If Tests", function () {
     const expr = new If(args[0], args[1], args[2]);
     expect(expr.typeOf()).toBe(TealType.none);
 
-    const { argStart: expected }: { argStart: TealSimpleBlock } = args[0].teal(
-      options
-    );
-    const { argStart: thenBlockStart, argEnd: thenBlockEnd } = args[1].teal(
-      options
-    );
-    const { argStart: elseBlockStart, argEnd: elseBlockEnd } = args[2].teal(
-      options
-    );
+    const { argStart: expected }: { argStart: TealSimpleBlock } =
+      args[0].teal(options);
+    const { argStart: thenBlockStart, argEnd: thenBlockEnd } =
+      args[1].teal(options);
+    const { argStart: elseBlockStart, argEnd: elseBlockEnd } =
+      args[2].teal(options);
     const expectedBranch = new TealConditionalBlock([]);
     expectedBranch.trueBlock = thenBlockStart;
     expectedBranch.falseBlock = elseBlockStart;
@@ -98,12 +89,10 @@ describe("If Tests", function () {
     const expr = new If(args[0], args[1]);
     expect(expr.typeOf()).toBe(TealType.none);
 
-    const { argStart: expected }: { argStart: TealSimpleBlock } = args[0].teal(
-      options
-    );
-    const { argStart: thenBlockStart, argEnd: thenBlockEnd } = args[1].teal(
-      options
-    );
+    const { argStart: expected }: { argStart: TealSimpleBlock } =
+      args[0].teal(options);
+    const { argStart: thenBlockStart, argEnd: thenBlockEnd } =
+      args[1].teal(options);
     const end = new TealSimpleBlock([]);
     const expectedBranch = new TealConditionalBlock([]);
     expectedBranch.trueBlock = thenBlockStart;

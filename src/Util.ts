@@ -74,7 +74,7 @@ function escapeLatin1String(str: string): string {
   let escaped = "";
 
   for (const char of str) {
-    let cp = char.codePointAt(0) as number;
+    const cp = char.codePointAt(0) as number;
     // escape special chars
 
     if (cp > 255) {

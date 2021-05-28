@@ -17,7 +17,7 @@ describe("Arg Tests", function () {
   });
 
   it("test_arg_invalid", function () {
-    expect(() => new Arg(("k" as unknown) as number)).toThrowError(
+    expect(() => new Arg("k" as unknown as number)).toThrowError(
       TealInputError
     );
     expect(() => new Arg(-1)).toThrowError(TealInputError);

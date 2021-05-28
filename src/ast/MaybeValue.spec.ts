@@ -63,9 +63,8 @@ describe("MaybeValue Tests", function () {
               const block1 = args[0].teal(options);
               expected = block1.argStart;
               const afterArg1 = block1.argEnd;
-              const { argStart: arg2, argEnd: afterArg2 } = args[1].teal(
-                options
-              );
+              const { argStart: arg2, argEnd: afterArg2 } =
+                args[1].teal(options);
               afterArg1.nextBlock = arg2;
               afterArg2.nextBlock = expectedCall;
             }
