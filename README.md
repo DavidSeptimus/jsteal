@@ -18,3 +18,4 @@ Examples
 * Verbose JS syntax: [Asset.ts](./examples/Asset.ts)
 * Simplied with _Functions and spread arguments: [AssetSimplified.ts](./examples/AssetSimplified.ts)
 
+[Documentation](https://davidseptimus.github.io/jsteal/modules.html) 
