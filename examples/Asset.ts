@@ -47,7 +47,7 @@ export function approvalProgram(): Cond {
 
   const newAdminStatus = Btoi(Txn.applicationArgs.getItem(1));
   const setAdmin = new Seq([
-    new Assert(And([isAdmin, Txn.applicationArgs.length().eq(new Int(2))])),
+    new Assert(And(isAdmin, Txn.applicationArgs.length().eq(new Int(2)))),
     App.localPut(new Int(1), new Bytes(["admin"]), newAdminStatus),
     Return(new Int(1)),
   ]);

@@ -14,7 +14,7 @@ describe("Nary Tests", function () {
 
   it("test_and_two", function () {
     const args = [new Int(1), new Int(2)];
-    const expr = And([args[0], args[1]]);
+    const expr = And(...args);
     expect(expr.typeOf()).toBe(TealType.uint64);
 
     const expected = new TealSimpleBlock([
@@ -32,7 +32,7 @@ describe("Nary Tests", function () {
 
   it("test_and_three", function () {
     const args = [new Int(1), new Int(2), new Int(3)];
-    const expr = And([args[0], args[1], args[2]]);
+    const expr = And(...args);
 
     expect(expr.typeOf()).toBe(TealType.uint64);
 
@@ -70,17 +70,17 @@ describe("Nary Tests", function () {
   });
 
   it("test_and_invalid", function () {
-    expect(() => And([new Int(1)])).toThrowError(TealInputError);
-    expect(() => And([new Int(1), Txn.receiver()])).toThrowError(TealTypeError);
-    expect(() => And([Txn.receiver(), new Int(1)])).toThrowError(TealTypeError);
-    expect(() => And([Txn.receiver(), Txn.receiver()])).toThrowError(
+    expect(() => And(new Int(1))).toThrowError(TealInputError);
+    expect(() => And(new Int(1), Txn.receiver())).toThrowError(TealTypeError);
+    expect(() => And(Txn.receiver(), new Int(1))).toThrowError(TealTypeError);
+    expect(() => And(Txn.receiver(), Txn.receiver())).toThrowError(
       TealTypeError
     );
   });
 
   it("test_or_two", function () {
     const args = [new Int(1), new Int(0)];
-    const expr = Or([args[0], args[1]]);
+    const expr = Or(...args);
     expect(expr.typeOf()).toBe(TealType.uint64);
 
     const expected = new TealSimpleBlock([
@@ -98,7 +98,7 @@ describe("Nary Tests", function () {
 
   it("test_or_three", function () {
     const args = [new Int(0), new Int(1), new Int(2)];
-    const expr = Or([args[0], args[1], args[2]]);
+    const expr = Or(...args);
     expect(expr.typeOf()).toBe(TealType.uint64);
 
     const expected = new TealSimpleBlock([
@@ -135,10 +135,10 @@ describe("Nary Tests", function () {
   });
 
   it("test_or_invalid", function () {
-    expect(() => Or([new Int(1)])).toThrowError(TealInputError);
-    expect(() => Or([new Int(1), Txn.receiver()])).toThrowError(TealTypeError);
-    expect(() => Or([Txn.receiver(), new Int(1)])).toThrowError(TealTypeError);
-    expect(() => Or([Txn.receiver(), Txn.receiver()])).toThrowError(
+    expect(() => Or(new Int(1))).toThrowError(TealInputError);
+    expect(() => Or(new Int(1), Txn.receiver())).toThrowError(TealTypeError);
+    expect(() => Or(Txn.receiver(), new Int(1))).toThrowError(TealTypeError);
+    expect(() => Or(Txn.receiver(), Txn.receiver())).toThrowError(
       TealTypeError
     );
   });

@@ -3,7 +3,6 @@ import { TealConditionalBlock } from "./TealConditionalBlock";
 import { TealOp } from "./TealOp";
 import { Ops } from "./Ops";
 import { TealBlock, TealSimpleBlock } from "./TealBlock";
-import "../spec-helper";
 
 describe("TealConditionalBock tests", function () {
   function arrEq(tba1: Array<TealBlock>, tba2: Array<TealBlock>) {

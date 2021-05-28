@@ -37,9 +37,8 @@ export class If extends Expr {
 
   public teal(options: CompileOptions): CompiledExpr {
     const { argStart: condStart, argEnd: condEnd } = this.cond.teal(options);
-    const { argStart: thenStart, argEnd: thenEnd } = this.thenBranch.teal(
-      options
-    );
+    const { argStart: thenStart, argEnd: thenEnd } =
+      this.thenBranch.teal(options);
     const end = new TealSimpleBlock([]);
 
     const branchBlock = new TealConditionalBlock([]);
@@ -51,9 +50,8 @@ export class If extends Expr {
     if (!this.elseBranch) {
       branchBlock.falseBlock = end;
     } else {
-      const { argStart: elseStart, argEnd: elseEnd } = this.elseBranch.teal(
-        options
-      );
+      const { argStart: elseStart, argEnd: elseEnd } =
+        this.elseBranch.teal(options);
       branchBlock.falseBlock = elseStart;
       elseEnd.nextBlock = end;
     }

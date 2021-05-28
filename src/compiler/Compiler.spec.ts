@@ -170,7 +170,7 @@ describe("Compiler Tests", function () {
     const program = Itob(
       new Int(1).add(new Int(1)).add(Tmpl.int("TMPL_VAR"))
     ).eq(
-      Concat([new Bytes(["test"]), new Bytes(["test"]), new Bytes(["test2"])])
+      Concat(new Bytes(["test"]), new Bytes(["test"]), new Bytes(["test2"]))
     );
     const expectedNoAssemble = `
       #pragma version 3

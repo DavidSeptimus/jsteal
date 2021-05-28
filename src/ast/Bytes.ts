@@ -30,7 +30,7 @@ export class Bytes extends LeafExpr {
    *  `
    * @param {Array<string>} args
    */
-  public constructor([...args]: Array<string> = []) {
+  public constructor(args: Array<string> = []) {
     super();
 
     if (args.length === 1) {

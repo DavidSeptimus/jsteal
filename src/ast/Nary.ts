@@ -79,7 +79,7 @@ export class NaryExpr extends Expr {
  * @param {Array<Expr>} args  the logical operands
  * @return {NaryExpr}
  */
-export function And(args: Array<Expr>): NaryExpr {
+export function And(...args: Array<Expr>): NaryExpr {
   return new NaryExpr(Ops.logic_and, TealType.uint64, TealType.uint64, args);
 }
 
@@ -93,7 +93,7 @@ export function And(args: Array<Expr>): NaryExpr {
  * @param {Array<Expr>} args the logical operands
  * @return {NaryExpr}
  */
-export function Or(args: Array<Expr>): NaryExpr {
+export function Or(...args: Array<Expr>): NaryExpr {
   return new NaryExpr(Ops.logic_or, TealType.uint64, TealType.uint64, args);
 }
 
@@ -113,6 +113,6 @@ export function Or(args: Array<Expr>): NaryExpr {
  * @param {Array<Expr>} args The array of expressions to concatenate
  * @return {NaryExpr}
  */
-export function Concat(args: Array<Expr>): NaryExpr {
+export function Concat(...args: Array<Expr>): NaryExpr {
   return new NaryExpr(Ops.concat, TealType.bytes, TealType.bytes, args);
 }

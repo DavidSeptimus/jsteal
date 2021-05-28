@@ -12,7 +12,7 @@ import { TealBlock } from "../ir/TealBlock";
 export class MaybeValue extends LeafExpr {
   public slotValue: ScratchSlot;
   public slotOk: ScratchSlot;
-  public immediateArgs: Array<number | string>;
+  public immediateArgs: Array<number | string | bigint>;
   public args: Array<Expr>;
 
   /**
@@ -26,7 +26,7 @@ export class MaybeValue extends LeafExpr {
   public constructor(
     public op: Op,
     public type: TealType,
-    immediateArgs?: Array<number | string>,
+    immediateArgs?: Array<bigint | number | string>,
     args?: Array<Expr>
   ) {
     super();
@@ -66,13 +66,10 @@ export class MaybeValue extends LeafExpr {
     const storeOk = this.slotOk.store();
     const storeValue = this.slotValue.store();
 
-    const { argStart: storeOkStart, argEnd: storeOkEnd } = storeOk.teal(
-      options
-    );
-    const {
-      argStart: storeValueStart,
-      argEnd: storeValueEnd,
-    } = storeValue.teal(options);
+    const { argStart: storeOkStart, argEnd: storeOkEnd } =
+      storeOk.teal(options);
+    const { argStart: storeValueStart, argEnd: storeValueEnd } =
+      storeValue.teal(options);
 
     callEnd.nextBlock = storeOkStart;
     storeOkEnd.nextBlock = storeValueStart;

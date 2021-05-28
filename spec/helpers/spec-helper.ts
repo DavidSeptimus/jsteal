@@ -1,7 +1,5 @@
-import { TealBlock } from "./ir/TealBlock";
-
 import "jasmine";
-import { TealComponent } from "./ir/TealComponent";
+import { TealBlock, TealComponent } from "../../src/internal";
 
 function blockEqualityTester(first: any, second: any) {
   return first instanceof TealBlock ? first.equals(second) : undefined;

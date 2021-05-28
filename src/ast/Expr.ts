@@ -27,7 +27,6 @@ import {
  * Abstract base class for PyTeal expressions.
  */
 export abstract class Expr {
-
   public abstract typeOf(): TealType;
 
   public abstract teal(options: CompileOptions): CompiledExpr;
@@ -104,7 +103,7 @@ export abstract class Expr {
    * @return {Expr}
    */
   public And(other: Expr): Expr {
-    return And([this, other]);
+    return And(this, other);
   }
 
   /**
@@ -118,7 +117,7 @@ export abstract class Expr {
    * @return {Expr}
    */
   public Or(other: Expr): Expr {
-    return Or([this, other]);
+    return Or(this, other);
   }
 }
 
