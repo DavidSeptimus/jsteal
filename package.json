@@ -12,7 +12,7 @@
     "docs": "typedoc --out docs file src",
     "test": "tsc && jasmine-ts",
     "lint": "eslint . --ext .ts  --ignore-path .gitignore --fix",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\" \"spec/**/*.ts\" \"spec/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\" \"spec/**/*.ts\"",
     "prepublishOnly": "npm test && npm run lint && npm run build",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",

@@ -98,7 +98,7 @@ export class ScratchSlot {
    *
    * @param value The value to store in this slot. If not included, the last value on
    * the stack will be stored. NOTE: storing the last value on the stack breaks the typical
-   * semantics of PyTeal, only use if you know what you're doing.
+   * semantics of JsTeal, only use if you know what you're doing.
    *
    * @return ScratchStore
    */
