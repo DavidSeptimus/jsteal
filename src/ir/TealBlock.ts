@@ -123,8 +123,13 @@ export abstract class TealBlock {
     const errors = [];
 
     for (const tealOp of this.ops) {
-      if (tealOp.op === Ops.load) {
+      if (tealOp.op === Ops.store) {
         for (const slot of tealOp.getSlots()) {
+          currentSlotsInUse.add(slot);
+        }
+      }
+      if (tealOp.op === Ops.load) {
+        for (const slot of tealOp.getSlots())
           if (!currentSlotsInUse.has(slot)) {
             const e = new TealCompileError(
               "Scratch slot load occurs before store",
@@ -132,7 +137,6 @@ export abstract class TealBlock {
             );
             errors.push(e);
           }
-        }
       }
     }
 
