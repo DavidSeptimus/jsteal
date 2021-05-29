@@ -1,4 +1,3 @@
-import { LeafExpr } from "./LeafExpr";
 import { asBigInt, isInt } from "../Util";
 import { CompiledExpr, CompileOptions } from "../compiler/Compiler";
 import { TealType } from "./Types";
@@ -6,11 +5,12 @@ import { Ops } from "../ir/Ops";
 import { TealOp } from "../ir/TealOp";
 import { TealBlock } from "../ir/TealBlock";
 import { TealInputError } from "../Errors";
+import Expr from "./Expr";
 
 /**
  * An expression that represents a uint64.
  */
-export class Int extends LeafExpr {
+export class Int extends Expr {
   private readonly value: bigint;
 
   /**
@@ -46,7 +46,7 @@ export class Int extends LeafExpr {
 /**
  * An expression that represents uint64 enum values.
  */
-export class EnumInt extends LeafExpr {
+export class EnumInt extends Expr {
   /**
    * Create an expression to reference a uint64 enum value.
    *

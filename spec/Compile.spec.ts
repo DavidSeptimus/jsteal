@@ -8,7 +8,7 @@ import { Mode } from "../src/ir/Ops";
 import { compileTeal } from "../src/compiler/Compiler";
 
 describe("Compile Tests", function () {
-  fit("test_asset", function () {
+  it("test_asset", function () {
     const approval = approvalProgram();
     const clearState = clearStateProgram();
 

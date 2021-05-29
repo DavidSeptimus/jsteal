@@ -1,4 +1,4 @@
-import { Expr, TealType } from "./internal";
+import { TealType } from "./ast/Types";
 
 export class TealInternalError extends Error {
   public constructor(message: string) {
@@ -6,19 +6,20 @@ export class TealInternalError extends Error {
   }
 }
 
-interface TealTypeErrorParams {
-  message?: string;
-  actual: TealType;
-  expected: TealType;
-}
 export class TealTypeError extends Error {
-  public constructor(params: TealTypeErrorParams) {
-    if (params.message != null) {
-      super(params.message);
+  public constructor({
+    message,
+    actual,
+    expected,
+  }: {
+    message?: string;
+    actual: TealType;
+    expected: TealType;
+  }) {
+    if (message != null) {
+      super(message);
     } else {
-      super(
-        `${TealType[params.actual]} while expected ${TealType[params.expected]}`
-      );
+      super(`${TealType[actual]} while expected ${TealType[expected]}`);
     }
   }
 }

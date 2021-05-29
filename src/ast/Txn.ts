@@ -1,6 +1,5 @@
 import { EnumInt } from "./Int";
 import { TealType } from "./Types";
-import { LeafExpr } from "./LeafExpr";
 import { CompiledExpr, CompileOptions } from "../compiler/Compiler";
 import { TealInputError, verifyFieldVersion } from "../Errors";
 import { TealOp } from "../ir/TealOp";
@@ -99,7 +98,7 @@ export const TxnFields = {
 /**
  * An expression that accesses a transaction field from the current transaction.
  */
-export class TxnExpr extends LeafExpr {
+export class TxnExpr extends Expr {
   public constructor(public field: TxnField) {
     super();
   }
@@ -126,7 +125,7 @@ export class TxnExpr extends LeafExpr {
 /**
  * An expression that accesses a transaction array field from the current transaction.
  */
-export class TxnaExpr extends LeafExpr {
+export class TxnaExpr extends Expr {
   public constructor(public field: TxnField, public index: number) {
     super();
     requireInt(index);

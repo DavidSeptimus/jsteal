@@ -1,7 +1,6 @@
 import { EnumInt } from "./Int";
 import { requireType, TealType } from "./Types";
 import { Op, Ops } from "../ir/Ops";
-import { LeafExpr } from "./LeafExpr";
 import { CompiledExpr, CompileOptions } from "../compiler/Compiler";
 import { TealBlock } from "../ir/TealBlock";
 import { TealOp } from "../ir/TealOp";
@@ -43,7 +42,7 @@ export const AppFields = {
 /**
  * An expression related to applications.
  */
-export class App extends LeafExpr {
+export class App extends Expr {
   public constructor(public field: AppField, public args: Array<Expr>) {
     super();
   }

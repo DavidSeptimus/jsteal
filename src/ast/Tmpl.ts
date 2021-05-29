@@ -1,11 +1,11 @@
-import { LeafExpr } from "./LeafExpr";
 import { TealType, validTmpl } from "./Types";
 import { Op, Ops } from "../ir/Ops";
 import { TealBlock } from "../ir/TealBlock";
 import { TealOp } from "../ir/TealOp";
 import { CompiledExpr, CompileOptions } from "../compiler/Compiler";
+import Expr from "./Expr";
 
-export class Tmpl extends LeafExpr {
+export class Tmpl extends Expr {
   public constructor(
     public op: Op,
     public type: TealType,

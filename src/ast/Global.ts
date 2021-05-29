@@ -1,10 +1,10 @@
 import { TealType } from "./Types";
-import { LeafExpr } from "./LeafExpr";
 import { CompiledExpr, CompileOptions } from "../compiler/Compiler";
 import { verifyFieldVersion } from "../Errors";
 import { TealOp } from "../ir/TealOp";
 import { Ops } from "../ir/Ops";
 import { TealBlock } from "../ir/TealBlock";
+import Expr from "./Expr";
 
 export class GlobalField {
   public constructor(
@@ -35,7 +35,7 @@ export const GlobalFields = {
 /**
  * An expression that accesses a global property.
  */
-export class Global extends LeafExpr {
+export class Global extends Expr {
   public constructor(public field: GlobalField) {
     super();
   }

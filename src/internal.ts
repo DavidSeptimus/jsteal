@@ -10,7 +10,6 @@ export * from "./ast/Expr";
 export * from "./ast/Types";
 
 // AST
-export * from "./ast/LeafExpr";
 export * from "./ast/UnaryExpr";
 export * from "./ast/BinaryExpr";
 

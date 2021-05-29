@@ -1,4 +1,3 @@
-import { LeafExpr } from "./LeafExpr";
 import { isInt } from "../Util";
 import { TealInputError } from "../Errors";
 import { CompiledExpr, CompileOptions } from "../compiler/Compiler";
@@ -6,11 +5,12 @@ import { TealType } from "./Types";
 import { TealOp } from "../ir/TealOp";
 import { Ops } from "../ir/Ops";
 import { TealBlock } from "../ir/TealBlock";
+import Expr from "./Expr";
 
 /**
  * An expression to get an argument when running in signature verification mode.
  */
-export class Arg extends LeafExpr {
+export class Arg extends Expr {
   /**
    * Get an argument for this program.
    *

@@ -5,16 +5,16 @@ import { TealInputError, TealTypeError } from "../Errors";
  */
 export enum TealType {
   // Unsigned 64 bit integer type.
-  uint64 = 0,
+  uint64,
 
   // Byte string type.
-  bytes = 1,
+  bytes,
 
   // Any type that is not none.
-  anytype = 2,
+  anytype,
 
   // Represents no value.
-  none = 3,
+  none,
 }
 
 export function requireType(actual: TealType, expected: TealType): void {
@@ -24,7 +24,7 @@ export function requireType(actual: TealType, expected: TealType): void {
       actual === TealType.none ||
       (actual != TealType.anytype && expected !== TealType.anytype))
   ) {
-    throw new TealTypeError({ actual: actual, expected: expected });
+    throw new TealTypeError({ actual, expected });
   }
 }
 

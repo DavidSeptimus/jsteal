@@ -1,18 +1,13 @@
-import {
-  CompiledExpr,
-  CompileOptions,
-  LeafExpr,
-  Ops,
-  TealBlock,
-  TealOp,
-  TealType,
-  validAddress,
-} from "../internal";
-
 /**
  * An expression that represents an Algorand address.
- */
-export class Addr extends LeafExpr {
+ */ import { CompiledExpr, CompileOptions } from "../compiler/Compiler";
+import { Ops } from "../ir/Ops";
+import { TealType, validAddress } from "./Types";
+import { TealBlock } from "../ir/TealBlock";
+import { TealOp } from "../ir/TealOp";
+import Expr from "./Expr";
+
+export class Addr extends Expr {
   /**
    * Create a new Addr expression.
    *

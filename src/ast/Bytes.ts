@@ -1,16 +1,16 @@
 import { CompiledExpr, CompileOptions } from "../compiler/Compiler";
-import { LeafExpr } from "./LeafExpr";
 import { TealType, validBase16, validBase32, validBase64 } from "./Types";
 import { escapeString } from "../Util";
 import { TealInputError } from "../Errors";
 import { TealOp } from "../ir/TealOp";
 import { Ops } from "../ir/Ops";
 import { TealBlock } from "../ir/TealBlock";
+import Expr from "./Expr";
 
 /**
  * An expression that represents a byte string.
  */
-export class Bytes extends LeafExpr {
+export class Bytes extends Expr {
   public base: string;
   public byteStr: string;
 

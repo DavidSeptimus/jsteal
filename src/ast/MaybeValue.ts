@@ -1,4 +1,3 @@
-import { LeafExpr } from "./LeafExpr";
 import { Op } from "../ir/Ops";
 import { TealType } from "./Types";
 import { Expr } from "./Expr";
@@ -9,7 +8,7 @@ import { TealBlock } from "../ir/TealBlock";
 /**
  * Represents a get operation returning a value that may not exist.
  */
-export class MaybeValue extends LeafExpr {
+export class MaybeValue extends Expr {
   public slotValue: ScratchSlot;
   public slotOk: ScratchSlot;
   public immediateArgs: Array<number | string | bigint>;
